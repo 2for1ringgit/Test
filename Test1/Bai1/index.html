@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let a = prompt("Nhập 1 dãy số (cách nhau bởi dấu phẩy)").split(",")
+let b = prompt("Nhập dãy số thứ 2 (cách nhau bởi dấu phẩy)").split(',')
+function mergeArray(array) {
+    let c = array.concat();
+    for(let i=0; i<c.length; i++){
+        for(let j=i+1; j<c.length; j++){
+            if (c[i] === c[j]){
+                c.splice(j--, 1);
+            }
+        }
+    }
+    return c;
+}
+let arr = mergeArray(a.concat(b));
+alert(`Dãy số mới là ${arr}`)</script>
+</html>

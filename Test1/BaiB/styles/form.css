@@ -1,0 +1,81 @@
+input {
+    padding: 5px 5px;
+    border: 0px;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+
+.input + label {
+    color: gray;
+}
+
+.input:focus {
+    border-bottom: 2px solid darkcyan;
+}
+
+.input:focus ~ label {
+    color: darkcyan;
+}
+
+.input-container {
+    margin: 10px 0px;
+}
+
+.input-container.line-break {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px;
+    outline: none;
+}
+.btn-primary {
+    color: rgb(52, 100, 66);
+    background-color: rgb(214, 210, 245);
+    border: 1px solid rgb(41, 65, 65);
+}
+
+.btn-primary:hover {
+    background-color: rgb(109, 107, 214);
+}
+
+.link {
+    color: darkcyan;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: cyan;
+}
+
+#container.error > input, label {
+    color: red;
+    border-color: red;
+}
+
+#container.error > label {
+    color: red;
+}
+
+#container.error + #errorMsg {
+    
+    color: red;
+}
+#CreateBook {
+    display: none;
+    background-color: rgba( 0, 0, 0, 0.5 );
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+}
+
+#CreateBook.visible {
+    display: block;
+}
+
+

@@ -10,14 +10,14 @@
 </body>
 <script>
     let array = prompt ('Nhập vào 1 dãy số nguyên(Cách nhau bởi dấu phẩy)').split(',');
-    function dividebytwo (arr,f) {
-        newArr =[];
-        for (i =0; i<array.length; i++){
-            if (i%2 == 0){
-                newArr = [i];
-            }
-            console.log(last[i]);
-        }
+    function divide (array) {
+        return array%2 == 0;
+
     }
+    function newArr (array,divide) {
+        return array.filter(divide);
+    }
+    
+    alert(newArr (array,divide).pop())
 </script>
 </html>

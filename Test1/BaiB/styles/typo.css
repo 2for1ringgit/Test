@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400&family=Rowdies&display=swap');
+
+.text-head-lg {
+    font-size: 32px;
+    font-family: "Open Sans";
+}
+
+.text-head-md {
+    font-size: 24px;
+    font-family: "Open Sans";
+}
+
+.text-head-sm {
+    font-size: 18px;
+    font-family: "Open Sans";
+}
+
+.text-body-lg {
+    font-family: "Roboto";
+    font-size: 18px;
+}
+
+.text-body-md {
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.text-body-sm {
+    font-family: "Roboto";
+    font-size: 12px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+.text-italic {
+    font-style: italic;
+}
+.text-center{
+    text-align: center;
+}
+
+* {
+    font-family: 'Open Sans';
+    font-size: 14px;
+}

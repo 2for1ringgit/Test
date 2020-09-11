@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <con-list></con-list>
+</body>
+
+<template id="List">
+    <link rel="stylesheet" href="./styles/index.css">
+    <div id="CreateBook"></div>
+    <div class="h-100 w-75 bg-white overflow-auto js-stopClick">
+        <button class="btn btn-primary" id="btnAddBook">Thêm Sách</button>
+        <div class="d-flex justify-space-between p-md hover">
+            <h3 class="flex-2 text-center">Tên sách</h3>
+            <h3 class="flex-1 text-center">Tên tác giả</h3>
+        </div>
+        <div id="bookList"></div>
+    </div>
+</template>
+
+<template id="bookForm">
+    <link rel="stylesheet" href="./styles/index.css">
+    <div class="h-100 w-75 bg-white js-stopClick">
+        <form id="form">
+            <form-input label="Tên sách" type="text" name="Tên sách"></form-input>
+            <form-input label="Tác giả" type="text" name="Tên tác giả"></form-input>
+            <div class="d-flex justify-space-between aline-center">
+                <button type="submit" class="btn btn-primary">Thêm</button>
+            </div>
+        </form>
+    </div>
+</template>
+
+<template id="bookItem">
+    <link rel="stylesheet" href="./styles/index.css">
+    <div id="container" class="d-flex justify-space-between p-md hover">
+        <h3 id="name" class="flex-2 no-margin"></h3>
+        <h3 id="no-of-mems" class="flex-1 text-center no-margin"></h3>
+        <h3 id="archive" class="flex-1 text-center no-margin"></h3>
+    </div>
+</template>
+<template id="formInput">
+    <link type="text/css" rel="stylesheet" href="./styles/index.css">
+    <div id="container" class="input-container line-break">
+        <input id="input" class="input" />
+        <label id="label"></label>
+    </div>
+    <div id="errorMsg"></div>
+</template>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> -->
+
+<script>
+    
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+            apiKey: "AIzaSyA-JLDH0wP7vdu1PYLlj1ouAmb0zR_V1DE",
+    authDomain: "cijs-12f5b.firebaseapp.com",
+    databaseURL: "https://cijs-12f5b.firebaseio.com",
+    projectId: "cijs-12f5b",
+    storageBucket: "cijs-12f5b.appspot.com",
+    messagingSenderId: "744664706420",
+    appId: "1:744664706420:web:84582a43953894d14f5021",
+    measurementId: "G-MKR1306VGZ"
+        };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+</script>
+
+<script type="module" src="./index.js"></script>
+
+</html>
